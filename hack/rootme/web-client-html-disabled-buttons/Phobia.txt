@@ -1,0 +1,7 @@
+All you have to do is open a browser inspectior of your choosing and examine the code. (If you are using chrome, you can get to this by pressing Ctrl + Shift + I, or by right clicking and choosing ’Inspect’.)
+
+The focus of this challenge is on the input fields underneath the "Under Construction’ header. The code should look like this:
+
+<input disabled type="text" name="auth-login" value="" />
+<input disabled type="submit" value="Member access" name="authbutton" /> 
+What you need to do is remove the ’disabled’ attributes from both lines of code. This should allow to use both the button and entry fields. After that, enter something into the textbox and click the button. It does not matter what you type as the page will recognize it as a valid ’access’. However, if you just click the button without entering anything, the page will simply refesh and the textbox and button will be disabled again.

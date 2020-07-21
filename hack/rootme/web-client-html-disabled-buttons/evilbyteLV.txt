@@ -1,0 +1,5 @@
+Using Firebug or any other browser inspection tool, you will find the button and entry field have been disabled
+
+<input disabled="" value="Member access" name="authbutton" type="submit">
+<input disabled="" name="auth-login" value="" type="text">
+simply delete "disabled" from both and enter admin for user name
