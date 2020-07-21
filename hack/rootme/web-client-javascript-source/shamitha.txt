@@ -1,0 +1,8 @@
+1.close the popup window
+2.i seen blank page
+3.presh f12 then select elements for seen code lines
+4.and overall
+
+tag then overall the
+<script> tag
+5.and seen the pass = "123456azerty"

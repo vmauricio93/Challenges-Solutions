@@ -1,0 +1,7 @@
+1. Close down the pop up window to see what the response is.
+2. You are presented with a blank webpage.
+3. Check if anything is hiding in the source code (ctrl+u to view the source code)
+3. The password is in the source code in clear text
+<quote>if ( pass == "12[...]ty" ) {</quote>
+
+ 🙂

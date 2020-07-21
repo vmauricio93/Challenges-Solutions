@@ -1,0 +1,7 @@
+same as " Javascript - Authentication" challenge, however this time you will not see any .js file loading, all are HTML, so you will need to analyze the response of the challenge pages to get the password as check inside the js code.
+
+pass=prompt("Entrez le mot de passe / Enter password");
+if ( pass == "12***rty" )
+alert("Mot de passe accepté, vous pouvez valider le challenge avec ce mot de passe.\nYou can validate the challenge using this password.");
+else
+alert("Mauvais mot de passe / wrong password !");

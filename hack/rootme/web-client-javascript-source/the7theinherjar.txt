@@ -1,0 +1,1 @@
+This One is simple too. At the prompt form, enter any password so that the page will load. Once it’s loaded, we can check the source to find the logic implemented in this password prompt. It’s a simple password comparaison between your entered password and the real one.
